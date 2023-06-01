@@ -1,0 +1,8 @@
+require("juel.plugins-setup")
+require("juel.core.options")
+require("juel.core.keymaps")
+require("juel.core.colorscheme")
+require("juel.plugins.comment")
+require("juel.plugins.nvim-tree")
+require("juel.plugins.lualine")
+require("juel.plugins.telescope")
