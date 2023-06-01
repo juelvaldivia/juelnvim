@@ -24,6 +24,9 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.list = true
+opt.listchars:append "space:."
+--opt.listchars:append "eol:↴"
 
 -- backspace
 opt.backspace = "indent,eol,start"
