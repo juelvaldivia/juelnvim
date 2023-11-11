@@ -4,7 +4,7 @@ if not status then
   return
 end
 
-local lualine_nightfly = require("lualine.themes.nightfly")
+local lualine_nightfly = require("lualine.themes.onedark")
 
 -- new colors for theme
 local new_colors = {

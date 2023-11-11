@@ -25,14 +25,18 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.list = true
-opt.listchars:append "space:."
+opt.listchars:append("space:.")
 --opt.listchars:append "eol:↴"
 
 -- backspace
 opt.backspace = "indent,eol,start"
 
+-- finding files - search down into folders
+
 -- clipboard
 opt.clipboard:append("unnamedplus")
+opt.path:append({ "**" })
+opt.wildignore:append({ "*/node_modules/*" })
 
 -- split windows
 opt.splitright = true
