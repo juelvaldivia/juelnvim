@@ -122,6 +122,16 @@ return packer.startup(function(use)
 
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/nvim-treesitter-refactor")
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+
+	-- terminal
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
