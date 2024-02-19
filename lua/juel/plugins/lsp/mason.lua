@@ -27,6 +27,7 @@ mason_lspconfig.setup({
 		"marksman",
 		"pylsp",
 		"lua_ls",
+		--		"ruby_ls",
 	},
 })
 

@@ -33,14 +33,15 @@ return packer.startup(function(use)
 	-- lua funcions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
-  -- themes
-  use("navarasu/onedark.nvim")
+	-- themes
+	use("navarasu/onedark.nvim")
 	use("bluz71/vim-nightfly-guicolors")
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 
-	use("szw/vim-maximizer") -- maximizes and restores current windows
+	-- maximizes and restores current windows
+	use("szw/vim-maximizer")
 
 	-- essential plugins
 	use("tpope/vim-surround")
@@ -51,6 +52,10 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
+
+	-- Highlight whitespace
+	use("lukoshkin/highlight-whitespace")
+	use("p00f/nvim-ts-rainbow")
 
 	-- icons
 	use("nvim-tree/nvim-web-devicons")
