@@ -55,7 +55,6 @@ return packer.startup(function(use)
 
 	-- Highlight whitespace
 	use("lukoshkin/highlight-whitespace")
-	use("p00f/nvim-ts-rainbow")
 
 	-- icons
 	use("nvim-tree/nvim-web-devicons")
@@ -120,6 +119,9 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
+	use("p00f/nvim-ts-rainbow")
+	use("nvim-treesitter/nvim-treesitter-refactor")
 
 	if packer_bootstrap then
 		require("packer").sync()

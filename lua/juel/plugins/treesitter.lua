@@ -13,12 +13,7 @@ treesitter.setup({
 	-- enable indentation
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
-	autotag = { enable = true },
-	rainbow = {
-		enable = true,
-		extended_mode = true,
-		max_file_line = nil,
-	},
+	-- autotag = { enable = true },
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"json",
@@ -38,7 +33,26 @@ treesitter.setup({
 		"dockerfile",
 		"gitignore",
 		"ruby",
+		"go",
 	},
 	-- auto install above language parsers
 	auto_install = true,
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
+	refactor = {
+		highlight_definitions = {
+			enable = true,
+			clear_on_cursor_move = true,
+		},
+		highlight_current_scope = { enable = true },
+		smart_rename = {
+			enable = true,
+			keymaps = {
+				smart_rename = "tr",
+			},
+		},
+	},
 })
