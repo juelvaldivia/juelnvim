@@ -45,8 +45,31 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- Terminal
 vim.keymap.set("n", "<leader>te", "<cmd>ToggleTerm<cr>")
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
+vim.keymap.set("t", "jk", "<C-\\><C-n>", opts)
 
 -- Folding
 vim.keymap.set("n", "zR", require("ufo").openAllFolds)
 vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+
+-- java
+keymap.set("n", "<leader>mcc", ":!mvn clean compile<CR>", { noremap = true })
+keymap.set(
+	"n",
+	"<leader>tsr",
+	'<cmd>ToggleTerm<CR><cmd>lua require("toggleterm").exec("mvn spring-boot:run")<CR>',
+	{ noremap = true, silent = true }
+)
+keymap.set("n", "<leader>f5", ":lua require'dap'.continue()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>f10", ":lua require'dap'.step_over()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>f11", ":lua require'dap'.step_into()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>f12", ":lua require'dap'.step_out()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", { noremap = true, silent = true })
+keymap.set(
+	"n",
+	"<leader>dB",
+	":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+	{ noremap = true, silent = true }
+)
+keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>dl", ":lua require'dap'.run_last()<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", { noremap = true, silent = true })

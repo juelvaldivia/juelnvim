@@ -18,14 +18,14 @@ null_ls.setup({
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.prettier.with({
-			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+			extra_args = { "--single-quote", "--jsx-single-quote" },
 		}),
 		formatting.stylua, -- lua formatter
-		diagnostics.eslint_d.with({ -- js/ts linter
-			condition = function(utils)
-				return utils.root_has_file(".eslintrc") -- change file extension if you use something else
-			end,
-		}),
+		-- diagnostics.eslint_d.with({ -- js/ts linter
+		-- condition = function(utils)
+		-- return utils.root_has_file(".eslintrc") -- change file extension if you use something else
+		-- end,
+		-- }),
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
