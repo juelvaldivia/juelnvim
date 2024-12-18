@@ -30,6 +30,7 @@ end
 return packer.startup(function(use)
 	use({ "vzze/calculator.nvim", opt = true, module = "calculator" })
 	use("wbthomason/packer.nvim")
+	use("github/copilot.vim")
 
 	-- lua funcions that many plugins use
 	use("nvim-lua/plenary.nvim")
@@ -139,7 +140,7 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap-python")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
-  use { 'nvim-neotest/nvim-nio', run = 'make' }
+	use({ "nvim-neotest/nvim-nio", run = "make" })
 
 	if packer_bootstrap then
 		require("packer").sync()
